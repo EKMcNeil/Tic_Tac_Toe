@@ -4,12 +4,20 @@ game = [[0, 0, 0],
         [0, 0, 0],
         [0, 0, 0]]
 
-print(" 0  1  2")
+def board():
+    print("   0  1  2")
+    for count, row in enumerate(game):
+        print(count, row)
+    print(board)
 
-count = 0
+board()
 
-for count, row in enumerate(game):
-    print(count, row)
-    
-mark = range(0:5)
+import sys
 
+if len(sys.argv) != 1:
+    print("Incorrect Number of Arguments")
+    sys.exit(1)
+
+move = sys.argv
+
+if move = 
