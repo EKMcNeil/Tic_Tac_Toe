@@ -5,12 +5,16 @@ game = [[0, 0, 0],
         [0, 0, 0]]
 
 def board(move = 0, row = 0, column = 0, display = False):
-    if not display:
-        game[row][column] = move
-    print("   0  1  2")
-    for count, row in enumerate(game):
-        print(count, row)
-    print(board)
+    try:
+	if not display:
+            game[row][column] = move
+            print("   0  1  2")
+        for count, row in enumerate(game):
+            print(count, row)
+        return game
+    except:
+        print("Move may be outside board parameters")
+        return False 
 
 board(display = True)
 board(move = 1, row = 1, column = 2)
